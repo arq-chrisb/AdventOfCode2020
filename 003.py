@@ -10,11 +10,11 @@ def part_one(content, right, down):
     while row < len(content):
         # check for tree
         if content[row][index] == '#':
-            tree_count = tree_count + 1
+            tree_count += 1
         
         # inc counters
         index = (index + right) % row_len
-        row = row + down
+        row += down
     
     return tree_count
 
