@@ -26,7 +26,7 @@ with open(file_name, 'r') as f:
     completed, accumulator, visited = validate(content)
     print(f'accumulator value at end: {accumulator}\n{"-".join([str(v) for v in visited])}')
 
-    potentials = [(idx, 'jmp' if instruction == 'nop' else 'nop' ) for idx, (instruction, argument) in enumerate(content) if instruction in ['jmp', 'nop']]
+    potentials = [(idx, 'jmp' if instruction == 'nop' else 'nop' ) for idx, (instruction, argument) in enumerate(content) if instruction in ['jmp', 'nop'] and idx in visited]
 
     # try flipping each potentials
     for idx, new_instruction in potentials:
