@@ -44,7 +44,4 @@ with open(file_name, 'r') as f:
 
         combos *= possibilities
 
-    print(len(path), len(essentials))
-
-
     print(f'part two: {combos}')
