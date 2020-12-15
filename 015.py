@@ -22,5 +22,5 @@ def iterate(numbers, iterations):
 
     print(this_number)
 
-iterate(numbers, 2020)
-iterate(numbers, 30000000)
+iterate(numbers[:], 2020)
+iterate(numbers[:], 30000000)
